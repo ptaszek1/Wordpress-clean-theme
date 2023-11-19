@@ -1,0 +1,48 @@
+* {
+    -webkit-tap-highlight-color:transparent;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+}
+*:active, *:focus {
+    outline:none
+}
+input::-moz-focus-inner, select::-moz-focus-inner, option::-moz-focus-inner, textarea::-moz-focus-inner {
+    border:0;
+    outline:none
+}
+img {
+    max-width:100%;
+    height:auto
+}
+html, body {
+    margin:0;
+    padding:0;
+    font-weight: 400;
+}
+body {
+    position: relative;
+}
+ul, ol {
+    padding:0;
+    margin:0;
+    list-style:none
+}
+a {
+    text-decoration:none;
+    outline:none;
+    transition: .3s color ease-in-out;
+}
+a:link, a:hover, a:visited {
+    text-decoration:none;
+    outline:none;
+}
+
+body {
+    position: relative;
+    text-transform: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
