@@ -1,1 +1,5 @@
-<?php if (!defined('ABSPATH')) exit;
+<?php if (!defined('ABSPATH')) exit; ?>
+
+<header class="header">
+    Header
+</header>
