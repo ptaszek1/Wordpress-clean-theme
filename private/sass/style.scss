@@ -1,12 +1,16 @@
 @charset "UTF-8";
 /*!
-* Theme Name: Taurus
+* Theme Name: THEMENAME
 * Theme created by  Author
 * Author: 			Author
 * Author URI: 		http://Author.pl
 */
 
-@import 'base/variables';
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/functions';
+@import 'utils/placeholders';
+
 @import 'base/reset';
 @import 'base/typography';
 
@@ -18,11 +22,6 @@
 @import 'layout/header';
 
 @import 'pages/example';
-
-@import 'utils/mixins';
-@import 'utils/variables';
-@import 'utils/functions';
-@import 'utils/placeholders';
 
 @import 'vendors/bootstrap';
 @import 'vendors/swiper';
