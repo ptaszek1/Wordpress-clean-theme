@@ -10,7 +10,7 @@
  */
 
 /**
- * cut2code only works in WordPress 5.7 or later.
+ * Works in WordPress 5.7 or later.
  */
 
 // Set correct timezone:
