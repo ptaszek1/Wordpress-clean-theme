@@ -23,4 +23,4 @@ require_once(get_template_directory() . '/includes/scripts.php');
 // require_once(get_template_directory() . '/includes/blocks.php');
 
 // Include custom post types and taxonomies:
-require_once(get_template_directory() . '/includes/custom-types-taxonomies.php');
+require_once(get_template_directory() . '/includes/custom-types.php');
