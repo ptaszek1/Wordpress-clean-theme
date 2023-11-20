@@ -1,3 +1,12 @@
+/**
+ * Reset styles for basic elements.
+ *
+ * This file contains CSS reset styles for basic elements such as `*`, `input`, `img`, `html`, `body`, `ul`, `ol`, and `a`.
+ * It sets common styles like box-sizing, tap highlight color, outline, max-width, margin, padding, font-weight, text-decoration, and transition.
+ * It also resets margins and paddings for heading elements (`h1`, `h2`, `h3`, `h4`, `h5`, `h6`).
+ *
+ * @file _reset.scss
+ */
 * {
     -webkit-tap-highlight-color:transparent;
     -webkit-box-sizing:border-box;
