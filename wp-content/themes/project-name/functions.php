@@ -21,3 +21,6 @@ require_once(get_template_directory() . '/includes/scripts.php');
 
 // Gutenberg blocks connected with ACF: - do not uncomment if you don't use ACF blocks
 // require_once(get_template_directory() . '/includes/blocks.php');
+
+// Include custom post types and taxonomies:
+require_once(get_template_directory() . '/includes/custom-types-taxonomies.php');
