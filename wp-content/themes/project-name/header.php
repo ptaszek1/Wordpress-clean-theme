@@ -14,6 +14,7 @@ $panelClass = (!empty($wp_query->query) && !empty($wp_query->query['pagename']) 
 ?>
 
 <body <?php body_class($panelClass); ?>>
+    <?php wp_body_open(); ?>
     <?php
     get_template_part('templates/header');
     ?>
