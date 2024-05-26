@@ -24,3 +24,6 @@ require_once(get_template_directory() . '/includes/scripts.php');
 
 // Include custom post types and taxonomies:
 require_once(get_template_directory() . '/includes/custom-types.php');
+
+// Breadcrumb method
+require_once(get_template_directory() . '/includes/breadcrumb.php');
