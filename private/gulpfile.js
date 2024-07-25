@@ -92,6 +92,32 @@ gulp.task("sass", function () {
 		.pipe(gulp.dest("../wp-content/themes/project-name"));
 });
 
+gulp.task("sass-main", function () {
+	return gulp
+		.src(["./sass/**/*.scss", "!./sass/blocks/**/*.scss"])
+		.pipe(wait(500))
+		.pipe(
+			plumber({
+				errorHandler: showError,
+			})
+		)
+		.pipe(sourcemaps.init())
+		.pipe(
+			sass({
+				outputStyle: "compressed",
+			}).on("error", sass.logError)
+		)
+		.pipe(
+			autoprefixer({
+				browsers: ["last 2 versions"],
+			})
+		)
+		.pipe(cleanCSS())
+        .pipe(rename("admin.css"))
+		.pipe(sourcemaps.write("."))
+		.pipe(gulp.dest("../wp-content/themes/project-name/assets/css"));
+});
+
 gulp.task("sass-components", function () {
 	return gulp
 		.src("./sass/blocks/*.scss")
@@ -135,6 +161,7 @@ gulp.task("build", function () {
 gulp.task("watch", function () {
 	gulp.watch("./sass/**/*.scss", ["sass"]);
 	gulp.watch("./sass/blocks/*.scss", ["sass-components"]);
+	gulp.watch(["./sass/**/*.scss", "!./sass/blocks/**/*.scss"], ["sass-main"]);
 	return watch();
 	// gulp.watch('./js/*.js', ['js']);
 });

@@ -1,6 +1,7 @@
 <?php if (!defined('ABSPATH')) exit;
 
 get_header();
+
 ?>
 
 <section class="page-error__section error-404 not-found">
@@ -23,5 +24,7 @@ get_header();
 </section>
 
 <?php
+
 get_footer();
+
 ?>

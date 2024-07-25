@@ -25,6 +25,12 @@ function ncmy_scripts()
     ]);
 }
 
+// Add compiled css file from all scss files to wordpress administration only with gutenberg and without blocks
+add_action('enqueue_block_editor_assets', 'ncmy_admin_styles');
+function ncmy_admin_styles() {
+    wp_enqueue_style('admin-custom', get_template_directory_uri() . '/assets/css/admin.css', false, '1.0.0');
+}
+
 /**
  * Removes default jQuery and other scripts from the frontend.
  *
