@@ -17,6 +17,7 @@ const buffer = require("vinyl-buffer");
 const source = require("vinyl-source-stream");
 const path = require("path");
 const through2 = require("through2");
+const esmify = require("esmify");
 
 function showError(err) {
 	notify.onError({
@@ -30,7 +31,7 @@ function showError(err) {
 
 function compile(watch) {
 	var bundler = watchify(
-		browserify("js/app.js", { debug: true }).transform(babelify, {
+		browserify("js/app.js", { debug: true, plugin: [esmify] }).transform(babelify, {
 			// Use all of the ES2015 spec
 			presets: ["@babel/env"],
 			sourceMaps: true,

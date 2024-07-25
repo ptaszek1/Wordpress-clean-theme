@@ -1,4 +1,4 @@
-import Swiper from "swiper";
+import Swiper from "swiper/swiper-bundle";
 
 /**
  * Initializes the Sliders component.
