@@ -59,24 +59,20 @@ function register_acf_block_types()
             'category'        => 'projectname-templates',
             'icon'            => $block['icon'],
             'keywords'        => $block['keywords'],
-            'mode'            => 'false',
+            'mode'            => 'auto',
             'supports'        => [
                 'align'           => false,
                 'anchor'          => true,
                 'customClassName' => true,
                 'jsx'             => true,
             ],
-            'example'  => array(
-                'attributes' => array(
-                    'mode' => 'preview',
-                    'data' => array(
-                        'is_preview' => true,
-                    ),
-                ),
-            ),
-            'enqueue_assets'  => function () use ($block) {
-                if (is_admin()) {
+            'enqueue_assets' => function () use ($block) {
+                // Enqueue style if it exists
+                if (!empty($block['enqueue_style'])) {
                     wp_enqueue_style('block-' . $block['name'], get_template_directory_uri() . '/' . $block['enqueue_style']);
+                }
+                // Enqueue script if it exists
+                if (!empty($block['enqueue_script'])) {
                     wp_enqueue_script('block-' . $block['name'], get_template_directory_uri() . '/' . $block['enqueue_script'], [], false, true);
                 }
             },
