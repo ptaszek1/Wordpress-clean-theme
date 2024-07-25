@@ -1,6 +1,6 @@
 <?php if (!defined('ABSPATH')) exit; 
 
-$args = array(
+$header_menu_args = array(
     'container'         => 'nav',
     'container_id'      => '',
     'container_class'   => '',
@@ -8,7 +8,7 @@ $args = array(
     'depth'             => 5,
     'link_before'       => '<span>',
     'link_after'        => '</span>',
-    'menu'              => 'header',
+    'menu'              => 'primary',
     'fallback_cb'       => false
 );
 
@@ -19,6 +19,6 @@ $args = array(
         <a href="<?= get_home_url() ?>" class="header__wprapper-logo" aria-label="<?php esc_attr_e('Strona główna', 'textdomain'); ?>">
             LOGO
         </a>
-        <?= wp_nav_menu($args) ?>
+        <?= wp_nav_menu($header_menu_args) ?>
     </div>
 </header>
