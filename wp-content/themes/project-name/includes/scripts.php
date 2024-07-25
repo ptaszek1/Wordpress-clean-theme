@@ -144,3 +144,13 @@ function wpis_image_sizes()
 }
 
 add_action('after_setup_theme', 'wpis_image_sizes');
+
+
+// Hidden ACF fields in the administration - protect from customers accidentally destroying the website
+function my_custom_admin_styles()
+{
+    echo '<style>
+        #toplevel_page_edit-post_type-acf-field-group { display: none; }
+    </style>';
+}
+add_action('admin_head', 'my_custom_admin_styles');

@@ -16,6 +16,9 @@
 // Set correct timezone:
 date_default_timezone_set('Europe/Warsaw');
 
+// Block Website - Maintenance
+// require_once(get_template_directory() . '/includes/maintenance.php');
+
 // Custom scripts/css and remove unused elements:
 require_once(get_template_directory() . '/includes/scripts.php');
 
