@@ -16,6 +16,12 @@
 // Set correct timezone:
 date_default_timezone_set('Europe/Warsaw');
 
+
+/**
+ * Simply uncomment/comment any code you need per project
+ */
+
+
 // Block Website - Maintenance
 // require_once(get_template_directory() . '/includes/maintenance.php');
 
@@ -33,3 +39,6 @@ require_once(get_template_directory() . '/includes/breadcrumb.php');
 
 // Method to change url in to svg files.
 require_once(get_template_directory() . '/includes/get-svg-content.php');
+
+// All Woocommerce scripts.
+// require_once(get_template_directory() . '/includes/woo.php');
