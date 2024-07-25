@@ -18,6 +18,7 @@ const source = require("vinyl-source-stream");
 const path = require("path");
 const through2 = require("through2");
 const esmify = require("esmify");
+const cleanCSS = require("gulp-clean-css");
 
 function showError(err) {
 	notify.onError({
@@ -86,6 +87,7 @@ gulp.task("sass", function () {
 				browsers: ["last 2 versions"],
 			})
 		)
+        .pipe(cleanCSS())
 		.pipe(sourcemaps.write("."))
 		.pipe(gulp.dest("../wp-content/themes/project-name"));
 });
@@ -112,6 +114,7 @@ gulp.task("sass-components", function () {
 				file.basename = filename; // use the original filename instead of 'style'
 			})
 		)
+        .pipe(cleanCSS())
 		.pipe(
 			sourcemaps.write(".", {
 				includeContent: false,
