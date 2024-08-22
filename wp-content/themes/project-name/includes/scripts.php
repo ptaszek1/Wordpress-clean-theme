@@ -9,7 +9,7 @@ add_action('wp_enqueue_scripts', 'ncmy_styles');
 function ncmy_styles()
 {
     wp_enqueue_style('custom', get_template_directory_uri() . '/style.css', false, '1.0.0');
-    wp_deregister_style('wp-block-library');
+    // wp_deregister_style('wp-block-library'); Uncomment if you dont use wordpress blocks
 }
 
 /**
@@ -108,21 +108,6 @@ add_action('after_setup_theme', 'custom_theme_setup');
  */
 add_theme_support('title-tag');
 
-
-
-/**
- * Adds options pages and sub-pages using the Advanced Custom Fields plugin.
- * If the function 'acf_add_options_sub_page' exists, it adds a sub-page called 'Header & footer' under the main options page.
- * If the function 'acf_add_options_page' exists, it adds the main options page.
- * This is necessary for version 5 of the Advanced Custom Fields plugin.
- */
-
-if (function_exists('acf_add_options_sub_page')) {
-    if (function_exists('acf_add_options_page')) {
-        acf_add_options_page(); // necessary for v.5 :-/
-    }
-    acf_add_options_sub_page('Header & footer');
-}
 
 /**
  * Enable SVG upload by adding SVG and SVGZ mime types to the allowed upload mimes.
