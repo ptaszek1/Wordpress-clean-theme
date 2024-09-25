@@ -9,6 +9,6 @@ if(!empty($className)) {
 }
 ?>
 
-<section class="green-box<?=$wp_classes ?>" <?php if(!empty($anchor)): ?>id="<?=$anchor; ?>"<?php endif; ?>>
+<section class="block-class-name<?=$wp_classes ?>" <?php if(!empty($anchor)): ?>id="<?=$anchor; ?>"<?php endif; ?>>
 
 </section>

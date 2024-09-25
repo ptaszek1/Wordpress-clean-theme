@@ -94,7 +94,7 @@ gulp.task("sass", function () {
 
 gulp.task("sass-main", function () {
 	return gulp
-		.src(["./sass/**/*.scss", "!./sass/blocks/**/*.scss"])
+		.src(["./sass/admin/*.scss", "!./sass/blocks/**/*.scss"])
 		.pipe(wait(500))
 		.pipe(
 			plumber({
@@ -161,7 +161,7 @@ gulp.task("build", function () {
 gulp.task("watch", function () {
 	gulp.watch("./sass/**/*.scss", ["sass"]);
 	gulp.watch("./sass/blocks/*.scss", ["sass-components"]);
-	gulp.watch(["./sass/**/*.scss", "!./sass/blocks/**/*.scss"], ["sass-main"]);
+	gulp.watch(["./sass/admin/*.scss", "!./sass/blocks/**/*.scss"], ["sass-main"]);
 	return watch();
 	// gulp.watch('./js/*.js', ['js']);
 });

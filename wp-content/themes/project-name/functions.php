@@ -28,6 +28,9 @@ date_default_timezone_set('Europe/Warsaw');
 // Custom scripts/css and remove unused elements:
 require_once(get_template_directory() . '/includes/scripts.php');
 
+// all SEO scripts:
+require_once(get_template_directory() . '/includes/seo.php');
+
 // Gutenberg blocks connected with ACF: - do not uncomment if you don't use ACF blocks
 // require_once(get_template_directory() . '/includes/blocks.php');
 
