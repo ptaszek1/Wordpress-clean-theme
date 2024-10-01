@@ -30,6 +30,7 @@ html, body {
 }
 body {
     position: relative;
+    text-transform: none;
 }
 ul, ol {
     padding:0;
@@ -44,11 +45,6 @@ a {
 a:link, a:hover, a:visited {
     text-decoration:none;
     outline:none;
-}
-
-body {
-    position: relative;
-    text-transform: none;
 }
 
 h1, h2, h3, h4, h5, h6 {

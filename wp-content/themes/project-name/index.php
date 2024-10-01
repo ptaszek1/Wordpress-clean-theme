@@ -11,7 +11,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package WordPress
- * @subpackage belotto
+ * @subpackage project-name
  * @since 1.0.0
  */
 ?>

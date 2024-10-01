@@ -1,6 +1,7 @@
 <?php if (!defined('ABSPATH')) exit; 
 
 $footer_menu_args = array(
+    'theme_location'    => 'footer',
     'container'         => 'div',
     'container_id'      => '',
     'container_class'   => '',

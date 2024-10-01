@@ -1,6 +1,7 @@
 <?php if (!defined('ABSPATH')) exit; 
 
-$header_menu_args = array(
+$menu_args = array(
+    'theme_location'    => 'primary',
     'container'         => 'nav',
     'container_id'      => '',
     'container_class'   => '',
@@ -20,5 +21,25 @@ $header_menu_args = array(
             LOGO
         </a>
         <?= wp_nav_menu($header_menu_args) ?>
+        <div class="header__burger burger-js">
+            <div class="header__burger-line"></div>
+            <div class="header__burger-line"></div>
+            <div class="header__burger-line"></div>
+        </div>
     </div>
 </header>
+<?php
+
+$args['container'] = 'div';
+$args['container_class'] = 'burger-menu__menu';
+$args['menu_class'] = 'burger-menu__menu';
+
+?>
+<div class="burger-menu">
+    <div class="burger-menu__top">
+        <div class="burger-menu__top-logo">
+            Burger LOGO
+        </div>
+    </div>
+    <?= wp_nav_menu($header_menu_args) ?>
+</div>
