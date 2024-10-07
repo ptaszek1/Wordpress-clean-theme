@@ -22,6 +22,9 @@ date_default_timezone_set('Europe/Warsaw');
  */
 
 
+// Security things
+require_once(get_template_directory() . '/includes/security.php');
+
 // Block Website - Maintenance
 // require_once(get_template_directory() . '/includes/maintenance.php');
 
