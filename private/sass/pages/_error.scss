@@ -1,0 +1,64 @@
+.page-error {
+    &__section {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 50px 0;
+    }
+    &__code {
+        font-size: 120px;
+        text-align: center;
+    }
+    &__title {
+        text-align: center;
+        font-size: 24px;
+        line-height: 32px;
+    }
+    &__content {
+        text-align: center;
+    }
+    &__message {
+        margin-bottom: 30px;
+        font-size: 16px;
+        line-height: 22px;
+        a {
+            color: #000;
+            text-decoration: underline;
+        }
+    }
+    &__search {
+        font-size: 0px;
+        form {
+            & > div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        label {
+            display: none;
+        }
+        input {
+            font-size: 16px;
+            display: block;
+            &[type="text"] {
+                padding: 10px 20px;
+                font-size: 18px;
+                border-radius: 10px 0 0 10px;
+                border: 1px solid #949494;
+                height: 44px;
+            }
+            &[type="submit"] {
+                height: 44px;
+                background-color: #000;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+                transition: .3s all ease-in-out;
+                &:hover {
+                    background-color: lighten($color: #000000, $amount: 20);
+                }
+            }
+        }
+    }
+}
